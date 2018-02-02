@@ -16,6 +16,7 @@ class Transfer
   end
   
   def execute_transaction
+<<<<<<< HEAD
     if @status != "complete"
       if @sender.balance > @amount
         @sender.balance -= @amount
@@ -35,5 +36,12 @@ class Transfer
       @sender.balance += @amount
       @status = "reversed"
     end
+=======
+    if 
+    @sender.balance -= @amount
+    @receiver.balance += @amount
+    @status = "complete"
+    @amount = 0
+>>>>>>> 6fd30198343929a4fdb8587517051b4e669d3ad1
   end
 end
